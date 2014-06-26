@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 import sys
 from PySide import QtGui, QtCore
 from movies import Ui_MainWindow
@@ -5,10 +7,10 @@ import controlador
 
 class Movies(QtGui.QMainWindow):
 	columnas_tabla = (
-			(u"TÌtutlo",200),
-			(u"AÒo",100),
+			(u"T√≠tutlo",200),
+			(u"A√±o",100),
 			(u"Director",150),
-			(u"PaÌs", 100),
+			(u"Pa√≠s", 100),
 			(U"Ranking", 75)
 			)
 
@@ -71,7 +73,7 @@ class Movies(QtGui.QMainWindow):
 			rank_viejo= int(movie[0]['ranking'])
 			rank_nuevo=rank_viejo-1
 			if(rank_nuevo ==0):
-				self.messageDialog.setText(u"No se puede subir m·s el rank.")
+				self.messageDialog.setText(u"No se puede subir m√°s el rank.")
 				self.messageDialog.exec_()
 			else:
 				movie_c=controlador.obtenerRank(rank_nuevo)
